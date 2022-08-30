@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Route,
+  Routes,
+} from "react-router-dom";
 import "../styles/app.css";
 
 const App = () => {
@@ -9,16 +14,24 @@ const App = () => {
         <nav>
           <ul className="app__nav-list">
             <li className="app__nav-list-item">
-              <Link to="/">Homepage</Link>
+              <NavLink className="app__nav-list-link" to="/">
+                Homepage
+              </NavLink>
             </li>
             <li className="app__nav-list-item">
-              <Link to="products">Products</Link>
+              <NavLink className="app__nav-list-link" to="products">
+                Products
+              </NavLink>
             </li>
             <li className="app__nav-list-item">
-              <Link to="about">About</Link>
+              <NavLink className="app__nav-list-link" to="about">
+                About
+              </NavLink>
             </li>
             <li className="app__nav-list-item">
-              <Link to="contact">Contact</Link>
+              <NavLink className="app__nav-list-link" to="contact">
+                Contact
+              </NavLink>
             </li>
           </ul>
         </nav>

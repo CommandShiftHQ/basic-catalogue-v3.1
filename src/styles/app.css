@@ -11,3 +11,13 @@
   display: inline-block;
   margin-right: 1em;
 }
+
+.app__nav-list-link {
+  text-decoration: none;
+  color: black;
+}
+
+.app__nav-list-link.active {
+  color: blue;
+  font-weight: bold;
+}
