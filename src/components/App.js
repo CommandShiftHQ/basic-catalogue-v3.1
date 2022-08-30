@@ -26,7 +26,7 @@ const App = () => {
               </NavLink>
             </li>
             <li className="app__nav-list-item">
-              <NavLink className="app__nav-list-link" to="products">
+              <NavLink className="app__nav-list-link" end to="products">
                 Products
               </NavLink>
             </li>
@@ -50,7 +50,7 @@ const App = () => {
           />
           <Route
             path="products/product/:id"
-            element={<ProductDetails />}
+            element={<ProductDetails products={products} />}
           />
           <Route path="about" element={<h2>About component</h2>} />
           <Route path="contact" element={<h2>Contact component</h2>} />
