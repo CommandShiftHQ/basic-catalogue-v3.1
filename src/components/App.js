@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "../styles/app.css";
 
 const App = () => {
@@ -8,10 +8,18 @@ const App = () => {
         <h1>Example shop</h1>
         <nav>
           <ul className="app__nav-list">
-            <li className="app__nav-list-item">Homepage</li>
-            <li className="app__nav-list-item">Products</li>
-            <li className="app__nav-list-item">About</li>
-            <li className="app__nav-list-item">Contact</li>
+            <li className="app__nav-list-item">
+              <Link to="/">Homepage</Link>
+            </li>
+            <li className="app__nav-list-item">
+              <Link to="products">Products</Link>
+            </li>
+            <li className="app__nav-list-item">
+              <Link to="about">About</Link>
+            </li>
+            <li className="app__nav-list-item">
+              <Link to="contact">Contact</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
