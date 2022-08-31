@@ -1,5 +1,6 @@
 import {
   BrowserRouter as Router,
+  Navigate,
   NavLink,
   Route,
   Routes,
@@ -54,7 +55,7 @@ const App = () => {
           />
           <Route path="about" element={<h2>About component</h2>} />
           <Route path="contact" element={<h2>Contact component</h2>} />
-          <Route path="*" element={<h2>Unknown route</h2>} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </div>
