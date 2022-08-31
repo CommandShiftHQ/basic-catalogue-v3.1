@@ -1,14 +1,30 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import "../styles/product-details.css";
 
-const ProductDetails = ({products}) => {
+const ProductDetails = ({ products }) => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/products", { replace: true });
+  };
 
   const selectedProduct = products.find(
     (product) => product.id === parseInt(id)
   );
+
+  if (!selectedProduct) {
+    return (
+      <>
+        <div className="product-details-wrap">
+          <div className="product-details">That product doesnt exist</div>
+          <button onClick={handleClick}>Go back</button>
+        </div>
+      </>
+    );
+  }
   return (
     <div className="product-details-wrap">
       <div className="product-details">
