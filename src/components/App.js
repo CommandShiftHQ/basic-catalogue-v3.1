@@ -8,6 +8,7 @@ import "../styles/app.css";
 
 //components
 import ProductList from "./ProductList";
+import ProductDetails from "./ProductDetails";
 
 // mock data
 import products from "../data/products.json";
@@ -46,6 +47,10 @@ const App = () => {
           <Route
             path="products"
             element={<ProductList products={products} />}
+          />
+          <Route
+            path="products/product/:id"
+            element={<ProductDetails />}
           />
           <Route path="about" element={<h2>About component</h2>} />
           <Route path="contact" element={<h2>Contact component</h2>} />
